@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style>
+		* { /* XXX EERASE THIS     TODO: Get decent reset*/ 
+			margin: 0;
+			padding: 0;
+		}
+		html,body {
+			min-height: 100%;
+			height: 100%;
+		}
+
+		body {
+			/*http://hypertext.net/2011/06/mimic-writer-aesthetic*/
+			color: #424242;/*XXX ORIGINAL */
+			background: #f5f6f6;/*XXX ORIGINAL*/
+			font: 24px  'Monaco', 'Consolas', 'Lucida Console','Nimbus Mono L', monospace; /* TODO: Convert to ems, figure out better font, maybe museo Sans? */
+			line-height: 1.5;
+		}
+
+		#main-text {
+			padding: 7px;
+			min-height: 100%;
+		}
+	</style>
+
+	
+</head>
+<body>
+	<div id="main-text" contentEditable='false' spellcheck>Please enable Javascript</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+
+	<script> window.jQuery || document.write('<script src="assets/jquery-1.6.1.min.js"><\/script>');</script>
+
+	<script src="script.js"></script>
+
+	<script>
+		var iEhWriter, //Global var
+				t,elem; //Test vars xxx DEV STUFF
+		$(document).ready(function() {
+			iEhWriter = new IEhWtr('#main-text');
+			iEhWriter.init();
+			//OR SIMPLY (new IEhWtr('#main-text')).init();
+
+
+			t = iEhWriter.t; //xxx Dev stuff!
+			elem = t.getElem;
+		})
+	</script>
+</body>
+</html>
+

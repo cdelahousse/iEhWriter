@@ -1,50 +1,81 @@
 <!doctype html>
-<html lang="en">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
   <title></title>
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
-	<script src="script.js"></script>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-	<script>
-		var content_area; //Global var
-		$(document).ready(function() {
-			content_area = new IEhWtr('#main-text');
-			content_area.init();
-			//OR SIMPLY (new IEhWtr('#main-text')).init();
-		})
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media="all" -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- More ideas for your <head> here: h5bp.com/docs/#head-Tips -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr and Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+	<script>//HTML5Shiv
+		/*@cc_on 'abbr article aside audio canvas details figcaption figure footer header hgroup mark meter nav output progress section summary time video'.replace(/\w+/g,function(n){document.createElement(n)})@*/
 	</script>
-	<style>
-		* { /* XXX EERASE THIS     TODO: Get decent reset*/ 
-			margin: 0;
-			padding: 0;
-		}
-		html,body {
-			min-height: 100%;
-			height: 100%;
-		}
-
-		body {
-			/*http://hypertext.net/2011/06/mimic-writer-aesthetic*/
-			color: #424242;/*XXX ORIGINAL */
-			background: #f5f6f6;/*XXX ORIGINAL*/
-			font: 24px  'Monaco', 'Consolas', 'Lucida Console','Nimbus Mono L', monospace; /* TODO: Convert to ems, figure out better font, maybe museo Sans? */
-			line-height: 1.5;
-		}
-
-		#main-text {
-			padding: 7px;
-			min-height: 100%;
-		}
-	</style>
-
-	
 </head>
+
 <body>
+
+  <div id="container">
+    <header>
+
+    </header>
+    <div id="main" role="main">
+
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+
 	<div id="main-text" contentEditable='false' spellcheck>Please enable Javascript</div>
+
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"><\/script>')</script>
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <!--<script src="js/plugins.js"></script>-->
+  <script src="js/script.js"></script>
+  <!-- end scripts-->
+	
+  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
 </body>
 </html>
-
